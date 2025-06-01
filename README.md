@@ -8,7 +8,7 @@ A bit of background: I worked on a dataset that includes user behavior features 
 
 Prior to this project, I completed all previous DQLab modules that covered the foundations of machine learning, both supervised and unsupervised, along with hands-on implementation using Python and scikit-learn.
 
----
+
 
 ## What's in this project...
 
@@ -19,7 +19,7 @@ The project follows a structured workflow consisting of:
 3. Machine Learning - Ad Banner Click prediction with Logistic Regression
 4. Evaluating the model using confusion matrix and classification report
 
----
+
 
 ## Dataset Overview
 
@@ -36,39 +36,36 @@ The dataset includes the following key features:
 9. **Timestamp**: The time when the user either clicked on the promotional banner or left the website without clicking.
 10. **Clicked on Ad**: Indicates whether the user clicked on the promotional banner (0 = No, 1 = Yes).
 
----
 
-## Project Results
 
-1. **Data Wrangling & Preprocessing**: I started by loading and inspecting the dataset. Fortunately, the dataset was clean there were no missing values. I removed some irrelevant columns such as `Ad Topic Line`, `City`, and `Timestamp` to keep only the numeric and relevant features. This step helped simplify the dataset for modeling. I also checked the datatypes to ensure everything was ready for the machine learning pipeline.
+## Result of this project...
 
-2. **Exploratory Data Analysis (EDA)**:  
-   I visualized the distributions of features like `Daily Time Spent on Site`, `Daily Internet Usage`, and `Age` using Seaborn. The EDA revealed some interesting insights—for example, users who spent more time on the site tended to click on ads more often, while users with higher daily internet usage were less likely to click. A correlation heatmap showed that `Age` and `Daily Internet Usage` were important features related to the target variable.
+1. **Exploratory Data Analysis**: After loading the dataset, I began by examining the correlation matrix to identify relationships between features and the target variable. This analysis revealed that features such as Age, Daily Time Spent on Site, and Daily Internet Usage had significant correlations with the likelihood of clicking on an advertisement. Subsequently, I visualized the distributions of these key numerical features to understand their spread and detect potential outliers. Finally, I utilized a pairplot to explore the relationships between all features, providing deeper insights into how they might influence a user's likelihood to click on an advertisement.
 
-3. **Modeling & Evaluation**:  
-   I used **Logistic Regression** to build a classification model to predict whether a user would click the ad. The dataset was split into training and test sets with a 70:30 ratio. After fitting the model, I evaluated it using a confusion matrix, classification report, and ROC-AUC score. The model achieved strong performance with high precision, recall, and an AUC score that indicates it distinguishes well between classes.
+2. **Preprocessing** I verified that the dataset contained no missing values or duplicate entries. Irrelevant columns were removed to simplify the modeling process. I also examined the features for outliers and applied feature scaling to ensure the numerical values were on similar scales, which is important for the performance of the logistic regression model.
+
+3. **Modeling & Evaluation**: A Logistic Regression model was trained to classify whether a user would click on a banner ad or not. The dataset was split into training and testing sets using a 80:20 ratio. Model performance was evaluated using a confusion matrix and classification report. The results showed that the model performed well in predicting user behavior, with a solid balance between sensitivity and specificity.
+
 
    Overall, the model performed quite well, and the process helped me better understand the full machine learning workflow—from cleaning data to drawing insights and evaluating predictions.
 
----
+
 
 ##  Potential Improvements
 
-- Test other classification models: Random Forest, SVM, or XGBoost  
-- Implement hyperparameter tuning with `GridSearchCV` or `RandomizedSearchCV`  
-- Extract additional features from the `Timestamp` column (e.g., hour, day)  
-- Apply cross-validation for more robust performance estimates  
-- Build a cleaner pipeline using `sklearn.pipeline` for maintainability and reproducibility  
+1. Try other classification algorithms such as Random Forest, SVM, or XGBoost to compare their performance with logistic regression.
+2. Interactive visuals 
+3. Extract additional features from the `Timestamp` column (e.g., hour, day).
+4. Apply cross-validation for more robust performance estimates.
+5. implement more complex python syntax (for example; use functions to simplify the codes).
+   
 
----
+
 
 ##  Resources Used
 
-- Krish Naik's YouTube tutorials  
-- Machine learning courses on Udemy  
-- Online articles from Stack Overflow, GeeksforGeeks, and Kaggle discussions  
-- **ChatGPT** – for code troubleshooting, explanation of logistic regression concepts, evaluation techniques, and documentation support  
+1. Indonesia Belajar's YouTube  
+2. Machine learning courses on DQlab 
+3. Online articles from github and Kaggle 
+4. ChatGPT: I use ChatGPT to evaluate code effectiveness, validate the analyses performed, assist in identifying more informative and appropriate data visualizations, etc.
 
----
-
-> Thank you for checking out this project! 🙌
