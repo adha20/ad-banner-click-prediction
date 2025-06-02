@@ -44,11 +44,11 @@ The dataset includes the following key features:
 
 2. **Preprocessing** I verified that the dataset contained no missing values or duplicate entries. Irrelevant columns were removed to simplify the modeling process. I also examined the features for outliers and applied feature scaling to ensure the numerical values were on similar scales, which is important for the performance of the logistic regression model.
 
-3. **Modeling & Evaluation**: A Logistic Regression model was trained to classify whether a user would click on a banner ad or not. The dataset was split into training and testing sets using a 80:20 ratio. Model performance was evaluated using a confusion matrix and classification report. The results showed that the model performed well in predicting user behavior, with a solid balance between sensitivity and specificity.
-
-
-   Overall, the model performed quite well, and the process helped me better understand the full machine learning workflow—from cleaning data to drawing insights and evaluating predictions.
-
+3. **Modeling & Evaluation**: A Logistic Regression model was trained to classify whether a user would click on a banner ad or not. The dataset was split into training and testing sets using an 80:20 ratio. Model performance was evaluated using a confusion matrix and classification report.
+   
+   The evaluation results show that the model achieved an accuracy of 94% on the test data. It also demonstrated strong performance metrics across both classes, with a precision of 0.90 and recall of 0.97 for class 0 (not clicked), and precision of 0.97 and recall of 0.91 for class 1 (clicked). These metrics indicate a solid balance between sensitivity and specificity.
+   
+   Overall, the model performed quite well in predicting user behavior, generalizing effectively to unseen data. This end-to-end process from cleaning and analyzing the data to building and validating the model provided a comprehensive understanding of the machine learning workflow.
 
 
 ##  Potential Improvements
